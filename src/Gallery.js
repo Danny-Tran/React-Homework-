@@ -1,18 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
-function imagesLoaded(parentNode) {
-  const imgElements = [...parentNode.querySelectorAll("img")];
-  for (let i = 0; i < imgElements.length; i += 1) {
-    const img = imgElements[i];
-    if (!img.complete) {
-      return false;
-    }
-  }
-  return true;
-}
-
+// GALLERY COMPONENT
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
@@ -34,8 +23,7 @@ class Gallery extends React.Component {
       <div>
         <img
           src={imageUrl}
-          onLoad={this.handleImageChange}
-          onError={this.handleImageChange}
+          
           />
       </div>
     );
@@ -49,8 +37,7 @@ class Gallery extends React.Component {
           this.galleryElement = element;
         }}
       >
-        {this.renderSpinner()}
-        <div className="images">
+          <div className="images">
           {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
         </div>
       </div>

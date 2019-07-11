@@ -1,19 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Counter from "./Counter";
 import Gallery from "./Gallery"
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   ReactDOM.render(
-//     React.createElement(Counter),
-//     document.getElementById("mount")
-//   );
-// });
 
-
+// MY ARRAY OF PICTRUE
 let urls = [
-  "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
   "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
+  "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
   "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
   "https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
   "https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=100",
