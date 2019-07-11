@@ -1,6 +1,6 @@
 React simple image gallery
 
-#1 How to Start
+# How to Start
 - git clone git@github.com:Danny-Tran/React-Homework-ShareSmart-.git
 - npm install
 - node server.js
