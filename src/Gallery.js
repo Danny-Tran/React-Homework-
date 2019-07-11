@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 class Gallery extends React.Component {
   renderImage(imageUrl) {
     return (
-      <div>
+      <span>
         <img src={imageUrl} />
-      </div>
+      </span>
     );
   }
 
   render() {
     return (
-      <div className="images">
+      <div className="images" >
         {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
       </div>
     );
