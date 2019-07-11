@@ -3,49 +3,21 @@ import PropTypes from "prop-types";
 
 // GALLERY COMPONENT
 class Gallery extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
-    };
-  }
-
-    
-  renderSpinner() {
-      if (!this.state.loading) {
-        return null;
-      }
-    return <span className="spinner" />;
-  }
-  
   renderImage(imageUrl) {
     return (
       <div>
-        <img
-          src={imageUrl}
-          
-          />
+        <img src={imageUrl} />
       </div>
     );
   }
 
   render() {
     return (
-      <div
-        className="gallery"
-        ref={element => {
-          this.galleryElement = element;
-        }}
-      >
-          <div className="images">
-          {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
-        </div>
+      <div className="images">
+        {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
       </div>
     );
   }
 }
-Gallery.propTypes = {
-  imageUrls: PropTypes.arrayOf(PropTypes.string).isRequired
-};
-export default Gallery;
 
+export default Gallery;
