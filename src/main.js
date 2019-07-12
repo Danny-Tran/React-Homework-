@@ -42,9 +42,7 @@ let Gallery = () => {
       next={() => fetchImages(5)}
       hasMore={true}
       loader={
-        <img
-          src="https://loading.io/spinners/blocks/index.rotating-squares-preloader-gif.gif"
-        />
+        <img src="https://loading.io/spinners/blocks/index.rotating-squares-preloader-gif.gif" />
       }
     >
   
