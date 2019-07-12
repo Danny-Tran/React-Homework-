@@ -43,8 +43,7 @@ let Gallery = () => {
       hasMore={true}
       loader={
         <img
-          src="https://res.cloudinary.com/chuloo/image/upload/v1550093026/scotch-logo-gif_jq4tgr.gif"
-          alt="loading"
+          src="https://loading.io/spinners/blocks/index.rotating-squares-preloader-gif.gif"
         />
       }
     >
