@@ -3,13 +3,15 @@ import ReactDOM from "react-dom";
 import axios from "axios"
 import InfiniteScroll from "react-infinite-scroll-component"
 
+
+// Single image function that load each image
 const UnsplashImage = ({ url, key }) => (
   <div className="image-item" key={key} >
     <img src={url} />
   </div>
 );
-
-let Collage = () => {
+// Gallery component
+let Gallery = () => {
   const [images, setImages] = React.useState([]);
   const [loaded, setIsLoaded] = React.useState(false);
 
@@ -19,8 +21,7 @@ let Collage = () => {
 
   const fetchImages = (count = 10) => {
     const apiRoot = "https://api.unsplash.com";
-    const accessKey =
-      "a22f61e98da4efa25d8860e77a91a596867dd335ecdf7feb12e086943db9565a";
+    const accessKey = "a22f61e98da4efa25d8860e77a91a596867dd335ecdf7feb12e086943db9565a";
 
     axios
       .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
@@ -42,23 +43,23 @@ let Collage = () => {
         />
       }
     >
-      <div className="image-grid">
-        {loaded
-          ? images.map((image, index) => (
-              <UnsplashImage
-                url={image.urls.regular}
-                key={index}
-              />
+      <div>
+        if (loaded){
+          images.map((image, index) => (
+            <UnsplashImage
+            url={image.urls.regular}
+            key={index}
+            />
             ))
-          : ""}
+          } else {
+             ""
+          }
+          
       </div>
     </InfiniteScroll>
   );
 };
 
 
-
-
-
 // Render the component to the DOM element with ID of mount
-ReactDOM.render(<Collage />, document.getElementById("mount"));
+ReactDOM.render(<Gallery />, document.getElementById("mount"));
